@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R8 Data Pipeline Documentation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 800px;
+            background-color: white;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            margin-bottom: 50px;
+            font-size: 1.2rem;
+        }
+        .pipeline-links {
+            display: grid;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .pipeline-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 30px;
+            border-radius: 15px;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .pipeline-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            border-color: #667eea;
+        }
+        .pipeline-card h2 {
+            color: #2c3e50;
+            margin: 0 0 15px 0;
+            font-size: 1.8rem;
+        }
+        .pipeline-card p {
+            color: #555;
+            margin: 0;
+            line-height: 1.6;
+        }
+        .tech-badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 10px 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>R8 Data Pipeline Architecture</h1>        
+        <div class="pipeline-links">
+            <a href="future-pipeline.html" class="pipeline-card">
+                <h2>Future Pricing Pipeline</h2>
+                <p>Batch processing pipeline with medallion architecture. Processes daily pricing updates from PriceLabs for vacation rental through Databricks Bronze → Silver → Gold layers.</p>
+            </a>
+            
+            <a href="incremental-pipeline.html" class="pipeline-card">
+                <h2>Incremental Pipeline</h2>
+                <p>Incremental processing layer with duplex property handling and intelligent field imputation.</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
