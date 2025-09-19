@@ -358,7 +358,6 @@
                         string ADR_STLY
                         string booked_date
                         string booked_date_STLY
-                        json reason
                         int min
                         string holiday_events
                     }
@@ -626,106 +625,7 @@
             </div>
         </div>
 
-        <h2>7. Pipeline Performance Metrics</h2>
-        <div class="description">
-            Performance metrics for each pipeline stage showing data volumes, processing times, and success rates.
-        </div>
-        <table class="metrics-table">
-            <thead>
-                <tr>
-                    <th>Pipeline Stage</th>
-                    <th>Notebook</th>
-                    <th>Processing Type</th>
-                    <th>Data Volume</th>
-                    <th>Key Operations</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr style="background-color: #e3f2fd;">
-                    <td><strong>Client Setup</strong></td>
-                    <td>2_Get_Client_APIs<br/>3_Get_Client_Listings</td>
-                    <td>Google Sheets Sync</td>
-                    <td>Variable clients</td>
-                    <td>API key retrieval, Listing inventory</td>
-                    <td><span class="status-success">✅ Active</span></td>
-                </tr>
-                <tr style="background-color: #e8f4f8;">
-                    <td><strong>Listing Prices</strong></td>
-                    <td>5_1_Extract<br/>5_2_Transform</td>
-                    <td>Batch API calls</td>
-                    <td>365 days × listings</td>
-                    <td>Price forecasting, Holiday events</td>
-                    <td><span class="status-success">✅ Production</span></td>
-                </tr>
-                <tr style="background-color: #e8f4f8;">
-                    <td><strong>Neighborhood Data</strong></td>
-                    <td>6_1_Extract<br/>6_2, 6_3_Transform</td>
-                    <td>Individual API calls</td>
-                    <td>Percentile pricing</td>
-                    <td>Market analysis, Competition data</td>
-                    <td><span class="status-success">✅ Production</span></td>
-                </tr>
-                <tr style="background-color: #f3e5f5;">
-                    <td><strong>Neighborhood Silver</strong></td>
-                    <td>6_4, 6_5_Transform</td>
-                    <td>Deduplication</td>
-                    <td>Aggregated metrics</td>
-                    <td>Quality enhancement, Metric calculation</td>
-                    <td><span class="status-success">✅ Refined</span></td>
-                </tr>
-                <tr style="background-color: #e8f4f8;">
-                    <td><strong>Overrides</strong></td>
-                    <td>7_1_Extract<br/>7_2, 7_3_Transform</td>
-                    <td>Per-listing calls</td>
-                    <td>Event pricing</td>
-                    <td>Manual adjustments, Special rules</td>
-                    <td><span class="status-success">✅ Production</span></td>
-                </tr>
-                <tr style="background-color: #e8f4f8;">
-                    <td><strong>Rate Plans</strong></td>
-                    <td>8_1_Extract<br/>8_2, 8_3_Transform</td>
-                    <td>Configuration data</td>
-                    <td>Pricing strategies</td>
-                    <td>Channel rates, Seasonal rules</td>
-                    <td><span class="status-success">✅ Production</span></td>
-                </tr>
-                <tr style="background-color: #e8f4f8;">
-                    <td><strong>Reservations</strong></td>
-                    <td>9_1_Extract<br/>9_2, 9_3_Transform</td>
-                    <td>Historical data</td>
-                    <td>365-day history</td>
-                    <td>Revenue analytics, Occupancy patterns</td>
-                    <td><span class="status-success">✅ Production</span></td>
-                </tr>
-                <tr style="background-color: #ffd70030;">
-                    <td><strong>Gold Layer Join</strong></td>
-                    <td>10_Join_All_Data_Gold</td>
-                    <td>Master aggregation</td>
-                    <td>All sources merged</td>
-                    <td>27-column dataset, Business calculations</td>
-                    <td><span class="status-success">✅ Complete</span></td>
-                </tr>
-                <tr style="background-color: #e8f5e8;">
-                    <td><strong>Validation</strong></td>
-                    <td>11_Validate_Gold_Table</td>
-                    <td>Quality checks</td>
-                    <td>Full dataset</td>
-                    <td>Duplicate detection, Completeness scoring</td>
-                    <td><span class="status-success">✅ Validated</span></td>
-                </tr>
-                <tr style="background-color: #4285f420;">
-                    <td><strong>BigQuery Export</strong></td>
-                    <td>13_Load_to_BigQuery</td>
-                    <td>Cloud upload</td>
-                    <td>Complete dataset</td>
-                    <td>Schema mapping, Data type handling</td>
-                    <td><span class="status-success">✅ Deployed</span></td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h2>8. Gold Table Schema - Business Ready Dataset</h2>
+        <h2>7. Gold Table Schema - Business Ready Dataset</h2>
         <div class="description">
             Complete schema for the Gold layer table with all 27 columns used for pricing optimization and revenue management.
         </div>
@@ -769,7 +669,7 @@
             </tbody>
         </table>
 
-        <h2>9. Business Value & Analytics Capabilities</h2>
+        <h2>8. Business Value & Analytics Capabilities</h2>
         <div class="pipeline-stage">
             <h4>💰 Dynamic Pricing Optimization</h4>
             <p><strong>365-Day Forecasting:</strong> Complete year-ahead pricing recommendations with daily granularity, incorporating market dynamics, seasonal patterns, and competitive positioning.</p>
@@ -778,7 +678,7 @@
 
         <div class="pipeline-stage">
             <h4>📊 Market Intelligence</h4>
-            <p><strong>Neighborhood Analytics:</strong> Real-time competitive set analysis with market occupancy trends and pricing distributions across comparable properties.</p>
+            <p><strong>Neighborhood Analytics:</strong> Competitive set analysis with market occupancy trends and pricing distributions across comparable properties.</p>
             <p><strong>YoY Comparisons:</strong> Historical performance tracking with STLY (Same Time Last Year) metrics for trend identification and forecasting accuracy.</p>
         </div>
 
